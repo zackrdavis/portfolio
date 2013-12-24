@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Soft Sandbox</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-32668396-1']);
+  		_gaq.push(['_trackPageview']);
+
+  		(function() {
+    		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-	analytics.com/ga.js';
+    		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  		})();
+
+	</script>
+	
+	<script src="jquery.js" type="text/javascript"></script>
+	<script src="jquery.mousewheel.js" type="text/javascript"></script>
+
+    
+    <script type="text/javascript">
+    	//follow cursor with div
+		$(document).mousemove(function(e){
+      		$('#follower').css('top', e.clientY).css('left', e.clientX);
+		});
+
+		//expand+contract divs
+		$(document).ready(function(){
+         
+         $(".expand").click(function(e){
+   			if($(e.target).hasClass('noshrink')){
+   				
+   			} else {
+   			   var current_div = $(this);
+               $(this).toggleClass('shrunk expanded');
+               $(".expanded").not(current_div).toggleClass('shrunk expanded');
+            }
+			});    
+			
+			$(".expand").click(function(){
+			   var item = $(this).attr('id');
+			   console.log(item);
+			   var itemIndex = $(this).index('.expand');
+			   var itemPos = itemIndex * 403 + 75; 
+			   
+			   if ($(this).hasClass('expanded')) {
+			      var centerOffset = (($(window).width())/2)-(908/2);
+			   } else {
+   			   var centerOffset = (($(window).width())/2)-(360/2);
+			   };
+			   
+			   $("#content").animate({scrollLeft:(itemPos - centerOffset)}, 500);
+
+         });
+		});
+		
+
+		
+		 
+    </script>
+    
+    <link rel="icon" 
+	      type="image/png" 
+	      href="zdavisfav.png">
+    
+</head>
+
+<body>
+	
+	<div id="infoContainer">
+		<div id="logo">
+			Soft Sandbox
+		</div>
+		<div id="tag">
+			Web design & development by &nbsp;<b>Zachary Davis</b>
+		</div>
+      <div id="contact">
+		   <!-- <a href="mailto:zackrdavis@gmail.com" target=_blank>Email Me</a> -->
+		   zackrdavis@gmail.com 
+      </div>
+	</div>
+	
+   <div id="background">
+		<div id="follower">
+			<div id="leftbox"></div>
+			<div id="rightbox"></div>
+			<div id="topbox"></div>
+			<div id="bottombox"></div>
+			<div id="brightspot"></div>
+		</div>
+   </div>
+      
+	<div id="content">
+	
+      <div id="item1" class="expand shrunk">
+			<div class="innerContainer">
+				<div class="bottomlabel">
+					<span class="title"><b>Fox HD</b><br />
+					Social Media Dashboard</span>
+					<span class="description">An in-office dashboard for Fox Network's headquarters in New York. Working with designers and data specialists at BlitzMetrics, I pulled in data from Facebook, Twitter and YouTube to highlight Fox's top-performing social media content.</span>
+				</div>
+			</div>
+		</div>
+
+	  <div id="item2" class="expand shrunk">
+	      <div class="innerContainer">
+				<div class="bottomlabel">
+					<span class="title"><b>American Medium Network</b><br />
+					Video Art Gallery</span>
+					<span class="description">A hub for video series produced by American Medium Gallery in New York, using the Vimeo API to deliver a coherent, uniquely-branded viewing experience. More episodes coming soon.</span>
+				</div>
+				<div class="linklabel">
+					<a class="noshrink" href="http://americanmedium.tv" target="_blank">VISIT</a>
+				</div>
+			</div>
+		</div>
+	
+		<div id="item3" class="expand shrunk">
+			<div class="innerContainer">
+				<div class="bottomlabel">
+					<span class="title"><b>David Knowles</b><br />
+					Art & Design Portfolio</span>
+					<span class="description">A minimal and non-hierarchical portfolio for David's multidisciplinary practice. Visitors experience a randomized tour of David's projects.</span>
+				</div>
+				<div class="linklabel">
+					<a class="noshrink" href="http://www.davidknowles.org" target="_blank">VISIT</a>
+				</div>
+			</div>
+		</div>
+		
+		<div id="item4" class="expand shrunk">
+			<div class="innerContainer">
+				<div class="bottomlabel">
+					<span class="title"><b>Appendix Project Space</b><br />
+					Gallery Website</span>
+					<span class="description">Appendix is an art residency and exhibition space in Portland, Oregon. Founded in 2008 by myself and Joshua Pavlacky, we continue to host physical and web-based projects by artists from all over the world.</span>
+				</div>
+				<div class="linklabel">
+					<a class="noshrink" href="http://main.appendixspace.com" target="_blank">VISIT</a>
+				</div>
+			</div>
+		</div>
+		
+		<div id="item5" class="expand shrunk">
+			<div class="innerContainer">
+				<div class="bottomlabel">
+					<span class="title"><b>Floatrs.com</b><br />
+					Web-Based Meditation</span>
+					<span class="description">An experiment with javascript, CSS animation, and internal observation. This project replicates the eye floaters you'll sometimes notice when looking up at a blue sky.</span>
+				</div>
+				<div class="linklabel">
+					<a class="noshrink" href="http://www.floatrs.com" target="_blank">VISIT</a>
+				</div>
+			</div>
+		</div>
+		
+		<div id="item6" class="expand shrunk">
+			<div class="innerContainer">
+				<div class="bottomlabel">
+					<span class="title"><b>Wendigo</b><br />
+					CSS Experiment</span>
+					<span class="description">How well do web browsers calculate nested positioning on the fly? More importantly, how can repeating, timed CSS animations be made to look spookily organic? In this case, by basing the timing on the factorization of a very large number.</span>
+				</div>
+				<div class="linklabel">
+					<a class="noshrink" href="http://zacharydavis.info/wendigo.html" target="_blank">VISIT</a>
+				</div>
+			</div>
+		</div>
+		
+		<div id="item7" class="expand shrunk">
+			<div class="innerContainer">
+				<div class="bottomlabel">
+					<span class="title"><b>Flashlights</b><br />
+					HTML5 Canvas Experiment</span>
+					<span class="description">A flashlight effect created by compositing multiple transparencies for each animation frame, with motion determined by a simple flocking behavior. Requires a hardware-accelerated browser (such as Chrome) for smooth rendering.</span>
+				</div>
+				<div class="linklabel">
+					<a class="noshrink" href="http://softsandbox.net/flashlights/" target="_blank">VISIT</a>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	
+</body>
+</html>
+

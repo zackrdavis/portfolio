@@ -1,0 +1,48 @@
+<svg width="1440" height="900" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+ <title>gradients</title>
+ <defs>
+  <radialGradient r="0.5" cy="0.5" cx="0.5" spreadMethod="pad" id="svg_1">
+   <stop offset="0" stop-color="#FF0000"/>
+   <stop offset="1" stop-opacity="0" stop-color="#ff0000"/>
+   <stop offset="1" stop-opacity="0" stop-color="#00ffff"/>
+  </radialGradient>
+  <radialGradient r="0.5" cy="0.5" cx="0.5" spreadMethod="pad" id="svg_4">
+   <stop offset="0" stop-opacity="0.996094" stop-color="#00ffff"/>
+   <stop offset="1" stop-opacity="0" stop-color="#ff0000"/>
+   <stop offset="1" stop-opacity="0.996094" stop-color="#00ffff"/>
+  </radialGradient>
+  <radialGradient r="0.5" cy="0.5" cx="0.5" spreadMethod="pad" id="svg_8">
+   <stop offset="0" stop-opacity="0.996094" stop-color="#00ffff"/>
+   <stop offset="1" stop-opacity="0" stop-color="#00ffff"/>
+   <stop offset="1" stop-opacity="0" stop-color="#ff0000"/>
+   <stop offset="1" stop-opacity="0.996094" stop-color="#00ffff"/>
+  </radialGradient>
+  <radialGradient r="0.5" cy="0.5" cx="0.5" spreadMethod="pad" id="svg_10">
+   <stop offset="0" stop-color="#FF0000"/>
+   <stop offset="1" stop-opacity="0" stop-color="#ff0000"/>
+   <stop offset="1" stop-opacity="0.996094" stop-color="#00ffff"/>
+  </radialGradient>
+  <radialGradient r="0.5" cy="0.5" cx="0.5" spreadMethod="pad" id="svg_12">
+   <stop offset="0" stop-opacity="0.996094" stop-color="#ffff00"/>
+   <stop offset="1" stop-opacity="0" stop-color="#ffff00"/>
+   <stop offset="1" stop-opacity="0" stop-color="#ff0000"/>
+   <stop offset="1" stop-opacity="0.996094" stop-color="#00ffff"/>
+  </radialGradient>
+  <radialGradient r="0.5" cy="0.5" cx="0.5" spreadMethod="pad" id="svg_13">
+   <stop offset="0" stop-opacity="0.996094" stop-color="#ff00ff"/>
+   <stop offset="1" stop-opacity="0" stop-color="#ff00ff"/>
+   <stop offset="1" stop-opacity="0" stop-color="#ffff00"/>
+   <stop offset="1" stop-opacity="0" stop-color="#ff0000"/>
+   <stop offset="1" stop-opacity="0.996094" stop-color="#00ffff"/>
+  </radialGradient>
+ </defs>
+
+ <g>
+  <title>Layer 1</title>
+  <circle stroke="#000000" fill-opacity="0.5" id="svg_2" r="683.884173" cy="975.500017" cx="6.999933" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="url(#svg_10)"/>
+  <circle stroke="#000000" id="svg_7" r="705.849487" cy="-55.000014" cx="1291.000075" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="url(#svg_8)"/>
+  <circle stroke="#000000" id="svg_11" r="639.504761" cy="848.999995" cx="1079.000014" fill-opacity="0.5" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="url(#svg_12)"/>
+  <circle stroke="#000000" id="svg_14" r="772.086426" cy="-33.999998" cx="13.000002" fill-opacity="0.5" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="url(#svg_13)"/>
+ </g>
+</svg>

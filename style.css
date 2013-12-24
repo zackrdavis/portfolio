@@ -1,0 +1,302 @@
+a:link {color:#3f3f3f; font-weight:bold; font-size: 14px; text-decoration:none;}   
+a:visited {color:#3f3f3f; font-weight:bold; text-decoration:none;}  
+a:hover {color:red;text-decoration:none;}  
+a:active {color:white;text-decoration:none;} 
+
+@font-face { font-family: bariol; src: url('Bariol_Regular.otf'); } 
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family:bariol;
+	font-size:14px;
+	overflow:hidden;
+	color:#3f3f3f;
+	}
+
+#infoContainer{
+	position:fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 40px;
+	box-shadow: 3px 3px 15px -2px black;
+	background-color: white;
+	z-index:9999;
+	opacity:.6;
+	}
+
+#logo{
+	position: fixed;
+	top: 5px;
+	left: 0px;
+	font-size:30px;
+	margin-left:25px;
+	}
+
+#tag{
+	white-space: nowrap;
+	position: absolute;
+	left: 220px;
+	z-index:500;
+	top: 18px;
+	font-size:14px;
+	}
+
+#contact{
+	position: fixed;
+	height: 40px;
+	right: 20px;
+	z-index:500;
+	padding-bottom: 0px;
+	top: 18px;
+	font-size:14px;
+	font-weight: bold;
+	z-index:9999;
+	opacity:.6;
+	}
+
+#follower{
+	z-index: 25;
+	position:absolute;
+	pointer-events: none;
+	}
+
+        #leftbox{
+        	position: absolute;
+        	top: -1250px;
+        	left: -2000px;
+        	height: 2300px;
+        	width: 1610px;
+        	background-color:white;
+        	}
+        
+        #rightbox{
+        	position: absolute;
+        	top: -1250px;
+        	left: 390px;
+        	height: 2300px;
+        	width:1600px;
+        	background-color:white;
+        	}
+        
+        #topbox{
+        	position: absolute;
+        	top: -1250px;
+        	left: -400px;
+        	height: 850px;
+        	width:800px;
+        	background-color:white;
+        	}
+        
+        #bottombox{
+        	position: absolute;
+        	top: 400px;
+        	left: -400px;
+        	height: 650px;
+        	width:800px;
+        	background-color:white;
+        	}
+        
+        #brightspot{
+        	position: absolute;
+        	width:800px;
+        	height:800px;
+        	top: -400px;
+        	left: -400px;
+        	background-image: url(brightspot.png);
+        	background-size: 100%;
+        	pointer-events: none;
+        	}
+        
+#background{
+	position:fixed;
+    background-size: cover;
+    background-image: url('color.png');
+    z-index:0;
+    height: 100%;
+    width: 100%;
+        	}
+
+#content {
+	white-space: nowrap;
+	position:fixed;
+	bottom: 0px;
+	left:0px;
+	top:0px;
+	z-index: 500;
+	width: 100%;
+	height: 100%;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	z-index: 9998;
+	}
+
+.expand {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	bottom:-50%;
+	border-radius: 7px;
+	box-shadow: 3px 3px 15px -2px black;
+	margin-left: 20px;
+	margin-right:20px;
+	overflow: hidden;
+	z-index:9999;
+	pointer-events: auto;
+	}
+	
+.expanded{
+	width: 908px;
+	height: 550px;
+	margin-top: -290px;	
+	-webkit-transition: width .5s ease, height .5s ease, margin-top .5s ease;
+	-moz-transition: width .5s ease, height .5s ease, margin-top .5s ease;
+	-o-transition: width .5s ease, height .5s ease, margin-top .5s ease;
+	-ms-transition: width .5s ease, height .5s ease, margin-top .5s ease;
+	transition: width .5s ease, height .5s ease, margin-top .5s ease;
+	overflow:visible;
+	}
+	
+.shrunk{
+	width: 360px;
+	height: 360px;
+	margin-top: -155px;
+	-webkit-transition: width .5s ease, height .5s ease, margin-top .5s ease;
+	-moz-transition: width .5s ease, height .5s ease, margin-top .5s ease;
+	-o-transition: width .5s ease, height .5s ease, margin-top .5s ease;
+	-ms-transition: width .5s ease, height .5s ease, margin-top .5s ease;
+	transition: width .5s ease, height .5s ease, margin-top .5s ease;
+	cursor: pointer;
+	}
+	
+.innerContainer {
+	width: 908px;
+	height:550px;
+	}
+
+.bottomlabel {
+	position: absolute;
+	height:50px;
+	/* top:295px; */
+	bottom:0px;
+	left:0px;
+	background-color: white;
+	box-shadow: 3px 3px 15px -2px black;
+	width: 100%;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 10px;
+	bottom: 0px;
+	z-index: 9999;
+	line-height: 150%;
+	pointer-events:none;
+	white-space: normal;
+	color: black;
+	}
+	
+.expanded .bottomlabel{
+/* 	height:30px; */
+	width: 908px;
+	/* top:auto; */
+	bottom: -70px;
+	left:-15px;
+	background-color: transparent;
+   box-shadow: none;
+/*
+	-webkit-transition: bottom .5s ease, left .5s ease;
+	-moz-transition: bottom .5s ease, left .5s ease;
+	-o-transition: bottom .5s ease, left .5s ease;
+	-ms-transition: bottom .5s ease, left .5s ease;
+	transition: bottom .5s ease, left .5s ease;
+*/
+	}
+	
+.shrunk .description {
+   display:none;
+}
+
+.expanded .description {
+/*    float:right; */
+/*    padding-left:250px; */
+}
+
+.title {
+   float:left;
+   display: block;
+}
+
+.expanded .title {
+   height: 37px;
+   padding-right: 30px;
+   margin-right:30px;
+   border-right: 1px solid gray;
+}
+
+.linklabel {
+	position: absolute;
+	background-color: #f2ff5d;
+	box-shadow: 2px 2px 10px black;
+	width: 35px;
+	z-index:9999;
+	padding: 6px;
+	top: 5px;
+	left:380px;
+	transform:rotate(-4deg);
+	-ms-transform:rotate(-4deg); 
+	-moz-transform:rotate(-4deg); 
+	-webkit-transform:rotate(-4deg); 
+	-o-transform:rotate(-4deg); 
+	-webkit-transition: left .5s ease;
+	-moz-transition: left .5s ease;
+	-o-transition: left .5s ease;
+	-ms-transition: left .5s ease;
+	transition: left .5s ease;
+	}
+	
+
+.expanded .linklabel{
+	left:848px;
+	-webkit-transition: left .5s ease;
+	-moz-transition: left .5s ease;
+	-o-transition: left .5s ease;
+	transition: left .5s ease;
+	}
+		
+#item1 {
+	background-image: url(foxhdscreen.png);
+	background-position: center left;
+	margin-left:75px;
+	}
+		
+#item2 {
+	background-image: url(amnscreen.png);
+	background-position: bottom left;
+	}
+	
+#item3 {
+	background-image: url(dknowlesscreen.png);
+	background-position: center;
+	}
+	
+#item4 {
+   background-image: url(appendixscreen.png);
+	background-position: center;
+	}
+	
+#item5 {
+	background-image: url(floatrsscreen.png);
+	background-position: center;
+	}
+	
+#item6 {
+	background-image: url(wendigoscreen.png);
+	background-position: left center;
+	}
+	
+#item7 {
+   background-image: url(flashlightsscreen.png);
+	background-position: left center;
+	margin-right:75px;
+}
+
