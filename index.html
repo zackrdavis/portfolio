@@ -2,8 +2,12 @@
 <html>
 <head>
 	<title>Soft Sandbox</title>
+	<meta name="viewport" content="width=device-width; initial-scale=0.45; maximum-scale=0.45;" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href='http://fonts.googleapis.com/css?family=News+Cycle:400,700' rel='stylesheet' type='text/css'>
 	<script type="text/javascript">
 		var _gaq = _gaq || [];
 		_gaq.push(['_setAccount', 'UA-32668396-1']);
@@ -14,13 +18,10 @@
     		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-	analytics.com/ga.js';
     		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   		})();
-
 	</script>
-	
 	<script src="jquery.js" type="text/javascript"></script>
 	<script src="jquery.mousewheel.js" type="text/javascript"></script>
-
-    
+	<script src="code.js" type="text/javascript"></script>    
     <script type="text/javascript">
     	//follow cursor with div
 		$(document).mousemove(function(e){
@@ -42,24 +43,21 @@
 			
 			$(".expand").click(function(){
 			   var item = $(this).attr('id');
-			   console.log(item);
+			   // console.log(item);
 			   var itemIndex = $(this).index('.expand');
-			   var itemPos = itemIndex * 403 + 75; 
+			   var shrunkWidth = 260;
+			   var itemPos = itemIndex * (shrunkWidth + 63) + 75; 
 			   
 			   if ($(this).hasClass('expanded')) {
 			      var centerOffset = (($(window).width())/2)-(908/2);
 			   } else {
-   			   var centerOffset = (($(window).width())/2)-(360/2);
+   			   var centerOffset = (($(window).width())/2)-(shrunkWidth/2);
 			   };
 			   
 			   $("#content").animate({scrollLeft:(itemPos - centerOffset)}, 500);
 
          });
 		});
-		
-
-		
-		 
     </script>
     
     <link rel="icon" 
@@ -69,21 +67,8 @@
 </head>
 
 <body>
-	
-	<div id="infoContainer">
-		<div id="logo">
-			Soft Sandbox
-		</div>
-		<div id="tag">
-			Web design & development by &nbsp;<b>Zachary Davis</b>
-		</div>
-      <div id="contact">
-		   <!-- <a href="mailto:zackrdavis@gmail.com" target=_blank>Email Me</a> -->
-		   zackrdavis@gmail.com 
-      </div>
-	</div>
-	
-   <div id="background">
+
+  	<div id="background">
 		<div id="follower">
 			<div id="leftbox"></div>
 			<div id="rightbox"></div>
@@ -91,64 +76,101 @@
 			<div id="bottombox"></div>
 			<div id="brightspot"></div>
 		</div>
-   </div>
+  	</div>
       
 	<div id="content">
+
+		<header>
+			design and development by <a href="mailto:zackrdavis@gmail.com" target="_blank">zackrdavis@gmail.com</a>
+		</header>
 	
-      <div id="item1" class="expand shrunk">
+    	<div id="item1" class="expand shrunk">
 			<div class="innerContainer">
 				<div class="bottomlabel">
 					<span class="title"><b>Fox HD</b><br />
-					Social Media Dashboard</span>
-					<span class="description">An in-office dashboard for Fox Network's headquarters in New York. Working with designers and data specialists at BlitzMetrics, I pulled in data from Facebook, Twitter and YouTube to highlight Fox's top-performing social media content.</span>
+					Social Media Dashboard<br />
+					<em>front-end development</em></span>
+					<span class="description">Fox HD is a multi-screen social media dashboard for Fox Network's headquarters in New York. Working with designers and data specialists at BlitzMetrics, I pulled in data from Facebook, Twitter and YouTube to automatically track and highlight Fox's top-performing social media properties.</span>
 				</div>
 			</div>
 		</div>
 
-	  <div id="item2" class="expand shrunk">
-	      <div class="innerContainer">
+		<div id="artspeak" class="expand shrunk">
+		    <div class="innerContainer">
+				<div class="bottomlabel">
+					<span class="title"><b>Artspeak</b><br />
+					Non-profit Website<br />
+					<em>WordPress theme development</em></span>
+					<span class="description">Alongside designers Scott Ponik and Julie Peeters, I developed a custom WordPress theme to manage and display Artspeak's 20 years worth of archives. Our custom backend also allows the directors to customize the layout and typography of their frontpage for each new exhibition.
+				</div>
+				<div class="linklabel">
+					<a class="noshrink" href="http://artspeak.ca/" target="_blank">VISIT</a>
+				</div>
+			</div>
+		</div>
+
+		<div id="monica" class="expand shrunk">
+		    <div class="innerContainer">
+				<div class="bottomlabel">
+					<span class="title"><b>To You, Love Me</b><br />
+					Design Portfolio<br />
+					<em>website development</em></span>
+					<span class="description">Monica Nelson's design and art-direction portfolio includes a mix of still images and video spots for Urban Outfitters, Gap, Levi's, and others. This responsive site brings all the work together in a set of simple, intuitive slideshows, keeping her imagery front and center at all times.</span>
+				</div>
+				<div class="linklabel">
+					<a class="noshrink" href="http://www.toyou-loveme.com/" target="_blank">VISIT</a>
+				</div>
+			</div>
+		</div>
+	
+		<div id="item2" class="expand shrunk">
+		    <div class="innerContainer">
 				<div class="bottomlabel">
 					<span class="title"><b>American Medium Network</b><br />
-					Video Art Gallery</span>
-					<span class="description">A hub for video series produced by American Medium Gallery in New York, using the Vimeo API to deliver a coherent, uniquely-branded viewing experience. More episodes coming soon.</span>
+					Video Art Gallery<br />
+					<em>ux design and development</em></span>
+					<span class="description">NYC's American Medium Gallery commissions and co-produces episodic video art that combines modern web-based viewing with the spirit of public-access television. By using the Vimeo API, we got great video quality while leaving the artists in control of their videos and their viewer analytics.</span>
 				</div>
 				<div class="linklabel">
 					<a class="noshrink" href="http://americanmedium.tv" target="_blank">VISIT</a>
 				</div>
 			</div>
 		</div>
-	
+		
 		<div id="item3" class="expand shrunk">
 			<div class="innerContainer">
 				<div class="bottomlabel">
 					<span class="title"><b>David Knowles</b><br />
-					Art & Design Portfolio</span>
-					<span class="description">A minimal and non-hierarchical portfolio for David's multidisciplinary practice. Visitors experience a randomized tour of David's projects.</span>
+					Art &amp; Design Portfolio<br />
+					<em>website development</em></span>
+					<span class="description">A minimal and non-hierarchical portfolio for David's multidisciplinary practice.	Visitors experience a randomized tour of David's projects, each of which offers a micro-slideshow of included images.</span>
 				</div>
 				<div class="linklabel">
 					<a class="noshrink" href="http://www.davidknowles.org" target="_blank">VISIT</a>
 				</div>
 			</div>
 		</div>
-		
+			
 		<div id="item4" class="expand shrunk">
 			<div class="innerContainer">
 				<div class="bottomlabel">
 					<span class="title"><b>Appendix Project Space</b><br />
-					Gallery Website</span>
-					<span class="description">Appendix is an art residency and exhibition space in Portland, Oregon. Founded in 2008 by myself and Joshua Pavlacky, we continue to host physical and web-based projects by artists from all over the world.</span>
+					Gallery Website<br />
+					<em>website development and curation</em></span>
+					<span class="description">Appendix was an art residency and exhibition space in Portland, Oregon that I founded in 2008 with Joshua Pavlacky. We hosted physical and web-based projects by artists from all over the world. After producing a <a href="http://main.appendixspace.com/Book" target="parent">book</a> about the project, we closed our door for the last time in December, 2013.</span>
 				</div>
 				<div class="linklabel">
 					<a class="noshrink" href="http://main.appendixspace.com" target="_blank">VISIT</a>
 				</div>
 			</div>
 		</div>
-		
+			
 		<div id="item5" class="expand shrunk">
 			<div class="innerContainer">
 				<div class="bottomlabel">
 					<span class="title"><b>Floatrs.com</b><br />
-					Web-Based Meditation</span>
+					Web-Based Meditation<br />
+					&nbsp;</span>
 					<span class="description">An experiment with javascript, CSS animation, and internal observation. This project replicates the eye floaters you'll sometimes notice when looking up at a blue sky.</span>
 				</div>
 				<div class="linklabel">
@@ -156,26 +178,28 @@
 				</div>
 			</div>
 		</div>
-		
+			
 		<div id="item6" class="expand shrunk">
 			<div class="innerContainer">
 				<div class="bottomlabel">
 					<span class="title"><b>Wendigo</b><br />
-					CSS Experiment</span>
-					<span class="description">How well do web browsers calculate nested positioning on the fly? More importantly, how can repeating, timed CSS animations be made to look spookily organic? In this case, by basing the timing on the factorization of a very large number.</span>
+					CSS Experiment<br />
+					&nbsp;</span>
+					<span class="description">Just to see what would happen, I pushed the browser's ability to calculate nested positioning as far as I could. The timing of the animation is based on a factorization of a very large number, which gives the movement a spooky, organic quality.</span>
 				</div>
 				<div class="linklabel">
 					<a class="noshrink" href="http://zacharydavis.info/wendigo.html" target="_blank">VISIT</a>
 				</div>
 			</div>
 		</div>
-		
+			
 		<div id="item7" class="expand shrunk">
 			<div class="innerContainer">
 				<div class="bottomlabel">
 					<span class="title"><b>Flashlights</b><br />
-					HTML5 Canvas Experiment</span>
-					<span class="description">A flashlight effect created by compositing multiple transparencies for each animation frame, with motion determined by a simple flocking behavior. Requires a hardware-accelerated browser (such as Chrome) for smooth rendering.</span>
+					HTML5 Canvas Experiment<br />
+					&nbsp;</span>
+					<span class="description">A flashlight effect created by compositing multiple transparencies for each animation frame, with motion determined by a simple flocking behavior. Requires a hardware-acceleratedbrowser (such as Chrome) for smooth rendering.</span>
 				</div>
 				<div class="linklabel">
 					<a class="noshrink" href="http://softsandbox.net/flashlights/" target="_blank">VISIT</a>
